@@ -1,0 +1,127 @@
+version: "3.1"
+
+nlu:
+- intent: company_location
+  examples: |
+    - Where is [Company1](company) located?
+    - What is the address of [Company2](company)?
+    - At what location could I find the office for [Company3](company)?
+
+- intent: ceo_name
+  examples: |
+    - Who is the CEO of the [Company1](company)?
+    - What is the name of your [Company2](company)'s CEO?
+    - Could you please name the CEO of [Company2](company)?
+    
+- intent: cto_name
+  examples: |
+    - Who is the CTO of your [Company1](company)?
+    - What is the name of [Company2](company)'s CTO?
+    - Could you please tell me the name of the CTO of [Company2](company)?
+
+- intent: employee_info
+  examples: |
+    - Tell me about about this employee: [Employee1](employee).
+    - What is the the role of [Employee2](employee) in your company?
+    - What are the reponsibilities of [Employee3](employee) in this company?
+
+- entity: company
+  examples: |
+    - [Company1](company)
+    - [Company2](company)
+    - [Company3](company)
+
+- entity: employee
+  examples: |
+    - [Employee1](employee)
+    - [Employee2](employee)
+    - [Employee3](employee)
+    
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good aftecrnoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
