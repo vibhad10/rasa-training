@@ -12,7 +12,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   
-  # Additional Intents
+  # Added Intents
   - search_company_location
   - search_company_name
   - search_cto
@@ -30,7 +30,7 @@ entities:
       - john_doe
       - jane_doe
       
-# Define Slots
+# Define Slots (NOT BEING USED CURRENTLY)
 slots:
   employee_role:
     type: text
