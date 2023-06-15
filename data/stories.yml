@@ -1,6 +1,25 @@
 version: "3.1"
 
 stories:
+- story: company name path
+  steps:
+  - intent: search_company_name
+  - action: utter_company_name
+
+- story: company location path
+  steps:
+  - intent: search_company_location
+  - action: utter_company_location
+  
+- story: ceo path
+  steps:
+  - intent: search_ceo
+  - action: utter_ceo_name
+
+- story: cto path
+  steps:
+  - intent: search_cto
+  - action: utter_cto_name
 
 - story: happy path
   steps:

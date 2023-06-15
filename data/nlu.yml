@@ -1,42 +1,36 @@
 version: "3.1"
 
 nlu:
-- intent: company_location
+# Company Name
+- intent: search_company_name
   examples: |
-    - Where is [Company1](company) located?
-    - What is the address of [Company2](company)?
-    - At what location could I find the office for [Company3](company)?
+    - what company do you represent
+    - what company is this
+    - what is the name of this company
 
-- intent: ceo_name
+# Company Location
+- intent: search_company_location
   examples: |
-    - Who is the CEO of the [Company1](company)?
-    - What is the name of your [Company2](company)'s CEO?
-    - Could you please name the CEO of [Company2](company)?
+    - where is your company located
+    - where are the offices for Infogen Labs
+    - what are the locations for your company
+    - where is Infogen Labs located
+
+# CEO Name
+- intent: search_ceo
+  examples: |
+    - who is the ceo of Infogen Labs
+    - who is the ceo
+    - who is the ceo of this company
     
-- intent: cto_name
+# CTO Name
+- intent: search_cto
   examples: |
-    - Who is the CTO of your [Company1](company)?
-    - What is the name of [Company2](company)'s CTO?
-    - Could you please tell me the name of the CTO of [Company2](company)?
+    - who is the cto of Infogen Labs
+    - who is the cto
+    - who is the cto of this company
 
-- intent: employee_info
-  examples: |
-    - Tell me about about this employee: [Employee1](employee).
-    - What is the the role of [Employee2](employee) in your company?
-    - What are the reponsibilities of [Employee3](employee) in this company?
-
-- entity: company
-  examples: |
-    - [Company1](company)
-    - [Company2](company)
-    - [Company3](company)
-
-- entity: employee
-  examples: |
-    - [Employee1](employee)
-    - [Employee2](employee)
-    - [Employee3](employee)
-    
+# User saying hello
 - intent: greet
   examples: |
     - hey
@@ -53,6 +47,7 @@ nlu:
     - goodevening
     - good aftecrnoon
 
+# User Saying Goodbye
 - intent: goodbye
   examples: |
     - cu
@@ -66,6 +61,7 @@ nlu:
     - bye bye
     - see you later
 
+# User saying Yes
 - intent: affirm
   examples: |
     - yes
@@ -75,6 +71,7 @@ nlu:
     - that sounds good
     - correct
 
+# User saying No
 - intent: deny
   examples: |
     - no

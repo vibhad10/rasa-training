@@ -1,6 +1,9 @@
 version: "3.1"
 
+
+# Define the intents
 intents:
+  # Generated Intents
   - greet
   - goodbye
   - affirm
@@ -8,25 +11,56 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  
+  # Additional Intents
+  - search_company_location
+  - search_company_name
+  - search_cto
+  - search_ceo
 
+# Define Entities (NOT BEING USED CURRENTLY)
+entities:
+  - company
+  - employee_role
+    roles:
+      - ceo
+      - cto
+  - name
+    roles:
+      - john_doe
+      - jane_doe
+      
+# Define Slots
+slots:
+  employee_role:
+    type: text
+    influence_conversation: false
+  company:
+    type: text
+    influence_conversation: false
+  name:
+    type: text
+    influence_conversation: false
+
+# Define Responses
 responses:
+  utter_company_name:
+  - text: "Our company is called Infogen Labs"
+  
   utter_company_location:
-  - text: "Our company is located at 123 Main Street, City"
-  - text: "The company's address is 123 Main Street, City"
-  - text: "The company is located in San Francisco"
+  - text: "Our company is located in the United States, Europe, Canada, and India"
   
   utter_ceo_name:
-  - text: "The CEO of the company is Mike Walsh"
-  - text: "His name is Edward Foster"
-  - text: "Keshav Redkar"
+  - text: "The CEO of the company is Sanjeev Kuwadekar"
 
   utter_cto_name:
-  - text: "The CTO of the company is Mike Walsh"
-  - text: "His name is Edward Foster"
-  - text: "Keshav Redkar"
+  - text: "The CTO of the company is Sanjeev Kuwadekar"
+  
+  utter_thanks:
+  - text: "Thanks!"
 
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hi! How are you?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -39,7 +73,7 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Goodbye."
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
